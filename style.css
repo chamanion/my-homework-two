@@ -5,29 +5,29 @@ body{
 }
 header{
     
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     
 }
 .header-section{
     padding-top: 30px;
-    width:1050px;
+    width:1440px;
     background: #2D25A0;
     text-align: center;
     margin-right: 20px;
     margin-bottom: 40px;
 }
 .Full-div{
-    width: 100%;
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    
+     display: flex;
     text-align: center;
-    transition: transform 9s ease-out 0.3s;
+    transition: transform 0.25s ease;
    
 }
 .Half-div{
     width: 50%;
+    
 
     
    
@@ -49,8 +49,9 @@ header{
   background-color: blue;
 }
 
-.Full-div:hover img{
-    transform:translatex(-50px)
+.Half-div:hover img{
+  transform: scale(0.9);
+  
     
 }
 .Full-div img{
@@ -83,6 +84,7 @@ header{
     
 }
 .player{
+    padding-left: 10px;
     height: 474px;
     width: 330px;
     background-color: #FFFFFF;
@@ -167,13 +169,28 @@ footer img{
 /* ----------------------------media query for mobile------------------ */
 @media only screen and (max-width:688px) {
     .header-section{
-     width: 100%;
+     width:107%;
     }
     .Full-div{
-        grid-template-columns: repeat(1, 1fr);
+       flex-direction: column;
+       
+    }
+    .white{
+        font-size: 21px;
+    }
+    .style-button{
+        padding: 10px;
+    }
+    .Full-div img {
+        width: 158px;
+        height: 174px;
+        margin-top: 27px;
+    }
+    .Half-div{
+        width:100%;
     }
     .container{
-        width: 100%;
+        width: 86%;
     }
     .players{
         grid-template-columns: repeat(1, fr);
@@ -185,8 +202,22 @@ footer img{
     .All-Highlight{
         grid-template-columns: repeat(1, 1fr);
     }
+    .Half-Highlight {
+        width: 100%;
+        text-align: center;
+    }
+    .Half-Highlight img {
+        width: 283px;
+        height: 332px;
+        margin-top: 69px;
+    }
     .Club-section{
         width: 100%;
+    }
+    .club-title {
+        text-align: center;
+        font-size: 28px;
+        color: #2D25A0;
     }
     .players{
         grid-template-columns: repeat(1, 1fr);
